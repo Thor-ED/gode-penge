@@ -1,27 +1,27 @@
 <template>
-  <nav class="navbar-light bg-light navbar navbar-expand-lg">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-styling navbar-dark">
+    <div class="wrapper container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="GP_Logo_hjemmeside.png" id="logo-image" class="img-fluid" />
+        <img src="GP_Logo_new.png" id="logo-image" class="img-fluid" />
       </a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="list-container navbar-nav me-auto">
         <!-- <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#/front">Front</a>
         </li> -->
         <li class="nav-item">
           <a
-            class="nav-link"
+            class="nav-link active"
             href="#"
             @click.prevent="scrollToTarget('ex-article-page')"
-            >Artikler</a
+            >Hvorfor Gode Investeringer?</a
           >
         </li>
         <li class="nav-item">
           <a
-            class="nav-link"
+            class="nav-link active"
             href="#"
             @click.prevent="scrollToTarget('ex-podcast-page')"
-            >Podcasts</a
+            >Hvordan Laves Gode Investeringer?</a
           >
         </li>
         <li class="nav-item">
@@ -70,8 +70,42 @@ export default {
 </script>
 
 <style>
+.navbar-styling {
+  width: 100%;
+  background-color: var(--color-red);
+}
+
+.nav-link.extra {
+  color: var(--color-white);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: blue;
+}
+
 #logo-image {
   width: 60px;
   height: auto;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  margin-right: 20px;
+}
+
+.wrapper {
+  max-height: 40px;
+}
+
+.list.container {
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .list-container {
+    visibility: hidden;
+  }
 }
 </style>

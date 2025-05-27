@@ -1,15 +1,16 @@
 <template>
-  <navbar></navbar>
+  <navbarNew></navbarNew>
   <RouterView></RouterView>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
+// import Navbar from './components/Navbar.vue'
+import NavbarNew from './components/NavbarNew.vue'
 
 export default {
   name: 'App',
   components: {
-    Navbar
+    NavbarNew
   }
 }
 </script>

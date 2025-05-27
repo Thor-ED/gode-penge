@@ -32,8 +32,11 @@
 
 .content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 10rem; /* Space between text and buttons */
+  width: 1200px;
+  gap: 20%; /* Space between text and buttons */
 }
 
 .text-section {
@@ -50,13 +53,12 @@
 
 .tooltip-icon {
   display: inline-block;
-  margin-left: 0.25rem;
   background-color: #0057ff;
   color: white;
+  position: absolute;
   border-radius: 50%;
   padding: 0.1em 0.5em;
   font-size: 1rem;
-  vertical-align: top;
   cursor: pointer;
 }
 
@@ -76,4 +78,17 @@
   width: 200px;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .content {
+    /* flex-direction: column; */
+    width: 100%;
+    row-gap: 50px;
+  }
+}
+
+/* and (orientation: portrait) */
+/* 600px, 601px, 768px, 992px, 1200px */
+
+/* Mobile version */
 </style>
