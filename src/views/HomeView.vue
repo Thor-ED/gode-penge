@@ -1,26 +1,38 @@
 <template>
   <div class="container-fluid m-0 p-0" style="width: 100%">
-    <FrontPage></FrontPage>
+    <HeaderPage></HeaderPage>
 
-    <ArticlePage></ArticlePage>
+    <ArticlePageNew></ArticlePageNew>
 
-    <PodcastPage></PodcastPage>
+    <InvestCreation></InvestCreation>
+
+    <QuotePage></QuotePage>
+
+    <ClimateCrisisPage></ClimateCrisisPage>
+
+    <UtopiaPage></UtopiaPage>
 
     <ContactPage></ContactPage>
   </div>
 </template>
 
 <script>
-import FrontPage from './FrontPage.vue'
-import ArticlePage from './ArticlePage.vue'
-import PodcastPage from './PodcastPage.vue'
+import HeaderPage from './HeaderPage.vue'
+import ArticlePageNew from './ArticlePageNew.vue'
+import InvestCreation from './InvestCreation.vue'
+import QuotePage from './QuotePage.vue'
+import ClimateCrisisPage from './ClimateCrisisPage.vue'
+import UtopiaPage from './UtopiaPage.vue'
 import ContactPage from './ContactPage.vue'
 
 export default {
   components: {
-    FrontPage,
-    ArticlePage,
-    PodcastPage,
+    HeaderPage,
+    ArticlePageNew,
+    InvestCreation,
+    QuotePage,
+    ClimateCrisisPage,
+    UtopiaPage,
     ContactPage
   }
 }

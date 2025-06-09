@@ -1,7 +1,12 @@
 <template>
   <div class="container-fluid m-0 p-0 navbar-wrapper">
     <a class="navbar-brand" href="#">
-      <img src="GP_Logo_new.png" id="logo-image" class="img-fluid" />
+      <img
+        src="GP_Logo_new.png"
+        id="logo-image"
+        @click.prevent="goToHome"
+        class="img-fluid"
+      />
     </a>
     <a
       class="navbar-text highlight-navbar-text"
@@ -37,7 +42,7 @@
       <a
         class="navbar-text navbar-text-burger"
         href="#"
-        @click.prevent="scrollToTarget('ex-article-page')"
+        @click.prevent="scrollToTarget('ex-contact-page')"
         >kontakt os</a
       >
     </Slide>
@@ -47,6 +52,7 @@
 <script>
 import { nextTick } from 'vue'
 import { Slide } from 'vue3-burger-menu'
+import { useRouter } from 'vue-router'
 
 export default {
   components: {
@@ -54,7 +60,21 @@ export default {
   },
 
   setup() {
+    const router = useRouter()
+
+    function goToHome() {
+      //Go to home first
+      router.push({
+        name: 'home'
+      })
+    }
+
     const scrollToTarget = idTarget => {
+      //Go to home first
+      router.push({
+        name: 'home'
+      })
+
       // Wait a tick to ensure the DOM is updated
       nextTick(() => {
         const el = document.getElementById(idTarget)
@@ -76,7 +96,7 @@ export default {
       })
     }
 
-    return { scrollToTarget }
+    return { scrollToTarget, goToHome }
   }
 }
 </script>
@@ -121,6 +141,7 @@ export default {
 .navbar-text-burger {
   font-size: 20px;
   text-decoration: underline;
+  text-wrap: wrap;
 }
 
 .navbar-text-contact {
@@ -168,7 +189,7 @@ export default {
   top: 24px;
   left: 24px;
   margin-right: 15%;
-  cursor: auto;
+  cursor: pointer;
 }
 
 /* Mobile version */
